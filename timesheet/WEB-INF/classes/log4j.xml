@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+   <appender name="Console" class="org.apache.log4j.ConsoleAppender">
+      <param name="Target" value="System.err"/>
+      <layout class="org.apache.log4j.PatternLayout">
+         <!--            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss} %-5p - %m%n" />-->
+         <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss} %-5p %C:%L - %m%n"/>
+      </layout>
+   </appender>
+
+   <appender name="Email" class="org.apache.log4j.net.SMTPAppender">
+      <param name="BufferSize" value="1024"/>
+      <param name="SMTPHost" value="localhost"/>
+      <param name="From" value="th@localhost"/>
+      <param name="To" value="jvieira@f9c.com.br"/>
+      <param name="Subject" value="[ Tomcat Error ] Application message"/>
+      <layout class="org.apache.log4j.PatternLayout">
+         <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss} %-5p %C:%L - %m%n"/>
+         <!--            <param name="ConversionPattern" value="[%d{ISO8601}]%n%n%-5p%n%n%c%n%n%m%n%n" />-->
+      </layout>
+      <filter class="org.apache.log4j.varia.LevelRangeFilter">
+         <param name="LevelMin" value="ERROR"/>
+         <param name="LevelMax" value="FATAL"/>
+      </filter>
+   </appender>
+
+   <logger name="com.itth.ttraq">
+      <level value="debug"/>
+      <!--        <appender-ref ref="Email" />-->
+      <appender-ref ref="Console"/>
+   </logger>
+
+   <root>
+      <priority value="warn"/>
+      <appender-ref ref="Console"/>
+   </root>
+</log4j:configuration>
+

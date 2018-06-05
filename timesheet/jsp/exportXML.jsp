@@ -1,0 +1,1 @@
+<%@ page contentType="text/xml;charset=ISO-8859-1" language="java" %><%@ taglib uri="/WEB-INF/struts-logic-el.tld" prefix="logic" %><%@ taglib uri="/WEB-INF/c.tld" prefix="c" %><c:out escapeXml="false" value="${exportBean.xmlAsString}"/>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping auto-import="false">
+    <class
+        name="com.itth.ttraq.om.Assignment"
+        table="Assignment"
+        dynamic-update="false"
+        dynamic-insert="false"
+        >
+
+        <id
+            name="id"
+            column="id"
+            type="java.lang.String"
+            >
+            <generator class="uuid.hex">
+                <param name="sequence">generator_assignment</param>
+            </generator>
+        </id>
+
+        <many-to-one
+            name="user"
+            class="com.itth.ttraq.om.User"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            access="property"
+            >
+            <column
+                name="user_id"
+                unique-key="assigned"
+                />
+        </many-to-one>
+
+        <many-to-one
+            name="project"
+            class="com.itth.ttraq.om.Project"
+            cascade="none"
+            outer-join="auto"
+            update="true"
+            insert="true"
+            access="property"
+            >
+            <column
+                name="project_id"
+                unique-key="assigned"
+                />
+        </many-to-one>
+
+        <property
+            name="manager"
+            type="java.lang.Boolean"
+            update="true"
+            insert="true"
+            access="property"
+            column="manager"
+            not-null="true"
+            />
+
+        <property
+            name="ctime"
+            type="java.util.Date"
+            update="true"
+            insert="true"
+            access="property"
+            column="ctime"
+            length="19"
+            not-null="true"
+            />
+
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-Assignment.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>

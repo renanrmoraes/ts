@@ -1,0 +1,202 @@
+.bold {
+   font-weight: bold;
+}
+
+a {
+   font-weight: normal;
+   text-decoration: none;
+   color: #00008B;
+}
+
+a:hover {
+   color: #9E261A
+}
+
+hr {
+   noshade: true;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 8pt;
+   scrollbar-face-color: white;
+   scrollbar-highlight-color: white;
+   scrollbar-shadow-color: #838383;
+   scrollbar-3dlight-color: #838383;
+   scrollbar-arrow-color: #081E58;
+   scrollbar-track-color: white;
+   scrollbar-darkshadow-color: white;
+}
+
+td, tr, table, body, a, h1, h2, h3, pre {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+}
+
+textarea {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   background: #f0f0f0;
+}
+
+select {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   background: #f0f0f0;
+}
+
+input {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   background: #f0f0f0;
+}
+
+checkbox {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   background: #ffffff;
+}
+
+.input {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   background: #f0f0f0;
+}
+
+.submit {
+   width: 140px;
+}
+
+.menu {
+   font-weight: bold;
+   font-size: 12px;
+   color: #000000;
+}
+
+.text {
+   font-weight: normal;
+}
+
+.bigtext {
+   font-weight: normal;
+   font-size: 11px;
+}
+
+.bigtextbold {
+   font-weight: bold;
+   font-size: 11px;
+}
+
+.green {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   font-weight: normal;
+   text-decoration: none;
+   color: #006400;
+}
+
+.header {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   font-weight: normal;
+   text-decoration: none;
+   color: black;
+}
+
+.blue {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   text-decoration: none;
+   color: blue;
+}
+
+.silver {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   color: #606060;
+}
+
+.info {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10;
+   font-weight: normal;
+   text-decoration: none;
+   color: #C0C0C0;
+}
+
+.redbold {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   font-weight: bold;
+   text-decoration: none;
+   color: red;
+}
+
+.greenbold {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   font-weight: bold;
+   text-decoration: none;
+   color: green;
+}
+
+.own {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12;
+   font-weight: bold;
+   text-decoration: none;
+   color: green;
+}
+
+.nm {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #9E261A;
+}
+
+.small {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   text-decoration: none;
+}
+
+.red {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   text-decoration: none;
+   color: red;
+}
+
+fieldset {
+   border-style: solid;
+   border-width: 1pt;
+   border-color: gray;
+}
+
+legend {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   color: #A0A0A0;
+}
+
+.collapse {
+   border-style: solid;
+   border-width: 1pt;
+   border-color: gray;
+   border-collapse: collapse;
+}
+
+.bordered {
+   border-style: solid;
+   border-width: 1pt;
+   border-color: #aaaaaa;
+}
+
+.noborder {
+   border-style: none;
+   border-width: 0pt;
+   border-color: #aaaaaa;
+}
+

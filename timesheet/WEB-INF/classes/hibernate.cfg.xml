@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory name="ttraq">
+      <property name="show_sql">false</property>
+      <property name="use_out_join">auto</property>
+      <property name="current_session_context_class">thread</property>
+
+      <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+      <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+      <property name="hibernate.connection.url">jdbc:mysql://192.168.8.205/ttraq_current?autoReconnect=true</property> 
+      <!--<property name="hibernate.connection.url">jdbc:mysql://192.168.5.39/ttraq_current?autoReconnect=true</property>--> 
+      <property name="hibernate.connection.username">ts</property>
+      <property name="hibernate.connection.password">tsf9c</property>
+      
+      <property name="hibernate.c3p0.min_size">5</property>
+	  <property name="hibernate.c3p0.max_size">20</property>
+	  <property name="hibernate.c3p0.timeout">1800</property>
+	  <property name="hibernate.c3p0.max_statements">50</property>
+
+      <!-- mapping files -->
+      <mapping class="com.itth.ttraq.om.Assignment"/>
+      <mapping class="com.itth.ttraq.om.Cliente"/>
+      <mapping class="com.itth.ttraq.om.Project"/>
+      <mapping class="com.itth.ttraq.om.Status"/>
+      <mapping class="com.itth.ttraq.om.TimeStamp"/>
+      <mapping class="com.itth.ttraq.om.Type"/>
+      <mapping class="com.itth.ttraq.om.Regra"/>
+      <mapping class="com.itth.ttraq.om.Atividade"/>
+      <mapping class="com.itth.ttraq.om.User"/>
+      <mapping class="com.itth.ttraq.om.Vertical"/>       
+   </session-factory>
+</hibernate-configuration>

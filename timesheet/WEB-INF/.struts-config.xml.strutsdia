@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="logout" NAME="forward0" PATH="/Logout.do"
+  SHAPE="32,17,0,0" TARGET="action6" TITLE="logout" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="error" NAME="forward1" PATH="/jsp/error.jsp"
+  SHAPE="32,1073,0,0" TARGET="page0" TITLE="error" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="noprojects" NAME="forward2"
+  PATH="/jsp/noprojects.jsp" SHAPE="32,1185,0,0" TARGET="page1"
+  TITLE="noprojects" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="admin" NAME="forward3" PATH="/Admin.do"
+  SHAPE="32,1409,0,0" TARGET="action16" TITLE="admin" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="logon" NAME="forward4" PATH="/jsp/logon.jsp"
+  SHAPE="304,145,0,0" TARGET="page2" TITLE="logon" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="main" NAME="forward5" PATH="/Main.do"
+  SHAPE="32,273,0,0" TARGET="action13" TITLE="main" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#EditTimestamp" NAME="action0" PATH="/EditTimestamp"
+  SHAPE="32,385,0,0" TITLE="editTimeStampForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Alterar" NAME="forward0" PATH="/Main.do"
+   TARGET="action13" TITLE="Alterar" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID=" Salvar " NAME="forward1" PATH="/Main.do"
+   TARGET="action13" TITLE=" Salvar " TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID=" Salvar e Novo... " NAME="forward2"
+   PATH="/CreateTimestamp.do" TARGET="action5"
+   TITLE=" Salvar e Novo... " TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID=" Cancelar " NAME="forward3" PATH="/Main.do"
+   TARGET="action13" TITLE=" Cancelar " TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AdminType" NAME="action1" PATH="/AdminType"
+  SHAPE="32,1521,0,0" TITLE="adminTypeForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AdminProjects" NAME="action2" PATH="/AdminProjects"
+  SHAPE="32,1633,0,0" TITLE="adminProjectsForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#SelectTimestamp" NAME="action3"
+  PATH="/SelectTimestamp" SHAPE="304,609,0,0"
+  TITLE="selectTimestampForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/jsp/editTimestamp.jsp" TARGET="page3" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EditUserSettings" NAME="action4"
+  PATH="/EditUserSettings" SHAPE="32,593,0,0"
+  TITLE="editUserSettingsForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Main.do"
+   TARGET="action13" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#CreateTimestamp" NAME="action5"
+  PATH="/CreateTimestamp" SHAPE="304,401,0,0" TITLE="editTimeStampForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/jsp/editTimestamp.jsp" TARGET="page3" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#Logout" NAME="action6" PATH="/Logout"
+  SHAPE="304,33,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/jsp/logon.jsp" TARGET="page2" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DeleteTimestamp" NAME="action7"
+  PATH="/DeleteTimestamp" SHAPE="32,705,0,0" TITLE="deleteForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Main.do"
+   TARGET="action13" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#NoProjects" NAME="action8" PATH="/NoProjects"
+  SHAPE="32,1297,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/jsp/noprojects.jsp" TARGET="page1" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AdminStatus" NAME="action9" PATH="/AdminStatus"
+  SHAPE="32,1745,0,0" TITLE="adminStatusForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AddAssignment" NAME="action10" PATH="/AddAssignment"
+  SHAPE="32,1857,0,0" TITLE="addAssignmentForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#EditTimestamps" NAME="action11"
+  PATH="/EditTimestamps" SHAPE="32,817,0,0" TITLE="editTimeStampsForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Main.do"
+   TARGET="action13" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#SelectProject" NAME="action12" PATH="/SelectProject"
+  SHAPE="32,3105,0,0" TITLE="selectProjectForm" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#Main" NAME="action13" PATH="/Main"
+  SHAPE="304,289,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/jsp/main.jsp"
+   TARGET="page4" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#DeleteAssignment" NAME="action14"
+  PATH="/DeleteAssignment" SHAPE="32,1969,0,0" TITLE="deleteForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AddUser" NAME="action15" PATH="/AddUser"
+  SHAPE="32,2081,0,0" TITLE="adminUserForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#Admin" NAME="action16" PATH="/Admin"
+  SHAPE="304,1425,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="admin" NAME="forward0" PATH="/jsp/admin.jsp"
+   TARGET="page5" TITLE="admin" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#ViewUserSettings" NAME="action17"
+  PATH="/ViewUserSettings" SHAPE="32,2305,0,0"
+  TITLE="editUserSettingsForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="edit" NAME="forward0"
+   PATH="/jsp/editUserSettings.jsp" TARGET="page6" TITLE="edit"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#Export" NAME="action18" PATH="/Export"
+  SHAPE="32,2417,0,0" TITLE="exportForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="exportEXCEL" NAME="forward0"
+   PATH="/jsp/exportEXCEL.jsp" TARGET="page7" TITLE="exportEXCEL"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportXML" NAME="forward1"
+   PATH="/jsp/exportXML.jsp" TARGET="page8" TITLE="exportXML"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="/jsp/export.jsp" TARGET="page9" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportCSV" NAME="forward3"
+   PATH="/jsp/exportCSV.jsp" TARGET="page10" TITLE="exportCSV"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportHTML" NAME="forward4"
+   PATH="/jsp/exportHTML.jsp" TARGET="page11" TITLE="exportHTML"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#Logon" NAME="action19" PATH="/Logon"
+  SHAPE="32,129,0,0" TITLE="logonForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0" PATH="/jsp/logon.jsp"
+   TARGET="page2" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1" PATH="/Main.do"
+   TARGET="action13" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AdminUser" NAME="action20" PATH="/AdminUser"
+  SHAPE="32,2193,0,0" TITLE="adminUserForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#Setup" NAME="action21" PATH="/Setup"
+  SHAPE="32,929,0,0" TITLE="setupForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="setup" NAME="forward0" PATH="/jsp/setup.jsp"
+   TARGET="page12" TITLE="setup" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1" PATH="/Main.do"
+   TARGET="action13" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/jsp/error.jsp" SHAPE="240,1090,0,0"
+  SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/jsp/noprojects.jsp"
+  SHAPE="256,1202,0,0" SUBTYPE="jsp" TITLE="noprojects.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="/jsp/logon.jsp" SHAPE="544,18,0,0"
+  SUBTYPE="jsp" TITLE="logon.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3" PATH="/jsp/editTimestamp.jsp"
+  SHAPE="544,386,0,0" SUBTYPE="jsp" TITLE="editTimestamp.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4" PATH="/jsp/main.jsp" SHAPE="544,274,0,0"
+  SUBTYPE="jsp" TITLE="main.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="/jsp/admin.jsp" SHAPE="512,1410,0,0"
+  SUBTYPE="jsp" TITLE="admin.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6" PATH="/jsp/editUserSettings.jsp"
+  SHAPE="240,2322,0,0" SUBTYPE="jsp" TITLE="editUserSettings.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="/jsp/exportEXCEL.jsp"
+  SHAPE="304,2434,0,0" SUBTYPE="jsp" TITLE="exportEXCEL.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="/jsp/exportXML.jsp"
+  SHAPE="304,2674,0,0" SUBTYPE="jsp" TITLE="exportXML.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9" PATH="/jsp/export.jsp" SHAPE="304,2786,0,0"
+  SUBTYPE="jsp" TITLE="export.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10" PATH="/jsp/exportCSV.jsp"
+  SHAPE="304,2898,0,0" SUBTYPE="jsp" TITLE="exportCSV.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11" PATH="/jsp/exportHTML.jsp"
+  SHAPE="304,3010,0,0" SUBTYPE="jsp" TITLE="exportHTML.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page12" PATH="/jsp/setup.jsp" SHAPE="304,946,0,0"
+  SUBTYPE="jsp" TITLE="setup.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#ExportAll" NAME="action22" PATH="/ExportAll"
+  SHAPE="32,3329,0,0" TITLE="exportForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward2"
+   PATH="/jsp/exportAll.jsp" TARGET="page15" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportAllCSV" NAME="forward0"
+   PATH="/jsp/exportAllCSV.jsp" TARGET="page16" TITLE="exportAllCSV"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportAllXML" NAME="forward1"
+   PATH="/jsp/exportAllXML.jsp" TARGET="page14" TITLE="exportAllXML"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportAllHTML" NAME="forward3"
+   PATH="/jsp/exportAllHTML.jsp" TARGET="page17" TITLE="exportAllHTML"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exportAllEXCEL" NAME="forward4"
+   PATH="/jsp/exportAllEXCEL.jsp" TARGET="page13" TITLE="exportAllEXCEL"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page14" PATH="/jsp/exportAllXML.jsp"
+  SHAPE="304,3586,0,0" SUBTYPE="jsp" TITLE="exportAllXML.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="/jsp/exportAll.jsp"
+  SHAPE="304,3698,0,0" SUBTYPE="jsp" TITLE="exportAll.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page16" PATH="/jsp/exportAllCSV.jsp"
+  SHAPE="304,3810,0,0" SUBTYPE="jsp" TITLE="exportAllCSV.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page17" PATH="/jsp/exportAllHTML.jsp"
+  SHAPE="304,3922,0,0" SUBTYPE="jsp" TITLE="exportAllHTML.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13" PATH="/jsp/exportAllEXCEL.jsp"
+  SHAPE="240,3329,0,0" SUBTYPE="jsp" TITLE="exportAllEXCEL.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#AdminRegra" NAME="action23" PATH="/AdminRegra"
+  SHAPE="32,2769,0,0" TITLE="adminRegraForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#AddRegra" NAME="action24" PATH="/AddRegra"
+  SHAPE="32,2769,0,0" TITLE="adminRegraForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/Admin.do"
+   TARGET="action16" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

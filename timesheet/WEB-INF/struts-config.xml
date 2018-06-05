@@ -1,0 +1,357 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<!--
+     This is the Struts configuration file for the example application,
+     using the proposed new syntax.
+-->
+<struts-config>
+
+   <form-beans>
+      <!-- Logon form bean -->
+      <form-bean name="logonForm" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="username" type="java.lang.String"/>
+         <form-property name="password" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="editTimeStampForm" type="com.itth.ttraq.actionforms.TimeStampForm">
+     	 <form-property name="projectId" type="java.lang.String"/>
+      	 <form-property name="clienteId" type="java.lang.String"/>
+         <form-property name="hoursBegin" type="java.lang.String"/>
+         <form-property name="minBegin" type="java.lang.String"/>
+         <form-property name="hoursEnd" type="java.lang.String"/>
+         <form-property name="minEnd" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="editTimeStampsForm" type="com.itth.ttraq.actionforms.TimeStampsForm">
+      </form-bean>
+
+      <form-bean name="adminUserForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="userId" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+         <form-property name="firstName" type="java.lang.String"/>
+         <form-property name="lastName" type="java.lang.String"/>
+         <form-property name="email" type="java.lang.String"/>
+         <form-property name="login" type="java.lang.String"/>
+         <form-property name="password1" type="java.lang.String" initial=""/>
+         <form-property name="password2" type="java.lang.String" initial=""/>
+         <form-property name="superuser" type="java.lang.Boolean" initial="false"/>
+         <form-property name="bloqueiaLancamentos" type="java.lang.Boolean" initial="false"/>
+         <form-property name="isGerente" type="java.lang.Boolean" initial="false"/>
+      </form-bean>
+      
+      <form-bean name="adminRegraForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="regraId" type="java.lang.String"/>
+         <form-property name="horas" type="java.lang.String"/>
+         <form-property name="dataFeriado" type="java.lang.String"/>
+         <form-property name="descricao" type="java.lang.String"/>
+         <form-property name="hora" type="java.lang.String"/>
+         <form-property name="deslocamento" type="java.lang.Boolean" initial="false"/>
+         <form-property name="isTipoDeslocamento" type="java.lang.Boolean" initial="false"/>
+         <form-property name="command" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="adminTypeForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="typeEditId" type="java.lang.String"/>
+         <form-property name="typeId" type="java.lang.String"/>
+         <form-property name="name" type="java.lang.String"/>
+         <form-property name="fee" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+         <form-property name="timeClearing" type="java.lang.Boolean"/>
+      </form-bean>
+
+      <form-bean name="adminAtividadeForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="atividadeEditId" type="java.lang.String"/>
+         <form-property name="atividadeId" type="java.lang.String"/>
+         <form-property name="descricao" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+      </form-bean>
+      
+      <form-bean name="adminVerticalForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="verticalEditId" type="java.lang.String"/>
+         <form-property name="verticalId" type="java.lang.String"/>
+         <form-property name="descricao" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+      </form-bean>
+      
+      <form-bean name="adminClienteForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="clienteEditId" type="java.lang.String"/>
+         <form-property name="clientelId" type="java.lang.String"/>
+         <form-property name="nome" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+      </form-bean>
+      
+      
+      <form-bean name="adminStatusForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="statusEditId" type="java.lang.String"/>
+         <form-property name="statusId" type="java.lang.String"/>
+         <form-property name="name" type="java.lang.String"/>
+         <form-property name="color" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="deleteForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="id" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="adminProjectsForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="projectId" type="java.lang.String"/>
+         <form-property name="projectEditId" type="java.lang.String"/>
+         <form-property name="command" type="java.lang.String"/>
+         <form-property name="name" type="java.lang.String"/>
+         <form-property name="description" type="java.lang.String"/>
+         <form-property name="subproject" type="java.lang.Boolean" initial="false"/>
+      </form-bean>
+
+      <form-bean name="addAssignmentForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="projectId" type="java.lang.String"/>
+         <form-property name="userId" type="java.lang.String"/>
+         <form-property name="projectManager" type="java.lang.Boolean" initial="false"/>
+      </form-bean>
+
+      <form-bean name="selectProjectForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="projectId" type="java.lang.String" initial="0"/>
+         <form-property name="timeFilter" type="java.lang.String"/>
+         <form-property name="viewUserId" type="java.lang.String"/>
+         <form-property name="dataInicio" type="java.lang.String"/>
+         <form-property name="dataFim" type="java.lang.String"/>
+         <form-property name="query" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="selectTimestampForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="timeStampId" type="java.lang.String"/>
+         <form-property name="hoursBegin" type="java.lang.String"/>
+         <form-property name="minBegin" type="java.lang.String"/>
+         <form-property name="hoursEnd" type="java.lang.String"/>
+         <form-property name="minEnd" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="exportForm" type="com.itth.ttraq.actionforms.TimeStampFormExport">
+      </form-bean>
+
+      <form-bean name="setupForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="noinit" type="java.lang.Boolean"/>
+         <form-property name="action" type="java.lang.String"/>
+         <form-property name="databaseProduct" type="java.lang.String"/>
+         <form-property name="databaseAdminURL" type="java.lang.String"/>
+         <form-property name="databaseURL" type="java.lang.String"/>
+         <form-property name="databaseUser" type="java.lang.String"/>
+         <form-property name="databasePassword" type="java.lang.String"/>
+         <form-property name="databaseDriver" type="java.lang.String"/>
+         <form-property name="databaseInitDefault" type="java.lang.Boolean"/>
+         <form-property name="databaseName" type="java.lang.String"/>
+         <form-property name="databaseInitDemo" type="java.lang.Boolean"/>
+         <form-property name="demo" type="java.lang.Boolean"/>
+         <form-property name="copyright" type="java.lang.String"/>
+         <form-property name="smtpServer" type="java.lang.String" initial="localhost"/>
+         <form-property name="smtpPort" type="java.lang.String" initial="25"/>
+         <form-property name="smtpUser" type="java.lang.String" initial=""/>
+         <form-property name="smtpPassword" type="java.lang.String" initial=""/>
+         <form-property name="smtpDisable" type="java.lang.Boolean"/>
+         <form-property name="formatDate" type="java.lang.String"/>
+         <form-property name="formatTime" type="java.lang.String"/>
+      </form-bean>
+
+      <form-bean name="editUserSettingsForm" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="email" type="java.lang.String"/>
+         <form-property name="password" type="java.lang.String"/>
+         <form-property name="password2" type="java.lang.String"/>
+      </form-bean>
+   </form-beans>
+
+
+   <!-- ========== Global Forward Definitions ============================== -->
+   <global-forwards>
+      <forward name="logout" path="/Logout.do"/>
+      <forward name="main" path="/Main.do" redirect="true"/>
+      <forward name="admin" path="/Admin.do"/>
+      <forward name="noprojects" path="/jsp/noprojects.jsp"/>
+      <forward name="logon" path="/jsp/logon.jsp"/>
+      <forward name="error" path="/jsp/error.jsp"/>
+   </global-forwards>
+
+   <!-- ========== Action Mapping Definitions ============================== -->
+   <action-mappings>
+      <action parameter="_action" path="/Admin" type="com.itth.ttraq.actions.AdminAction" unknown="true"
+              input="/Main.do">
+         <forward name="admin" path="/jsp/admin.jsp"/>
+      </action>
+
+      <action parameter="_action" path="/AdminUser" type="com.itth.ttraq.actions.AdminUserAction" name="adminUserForm"
+              scope="request"
+              validate="false">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+
+      <action parameter="_action" path="/AddUser" type="com.itth.ttraq.actions.AddUserAction" name="adminUserForm"
+              scope="request"
+              validate="false" input="/Admin.do">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+      
+      <action parameter="_action" path="/AdminRegra" type="com.itth.ttraq.actions.AdminRegraAction" name="adminRegraForm"
+              scope="request"
+              validate="false">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+
+      <action parameter="_action" path="/AddRegra" type="com.itth.ttraq.actions.AddRegraAction" name="adminRegraForm"
+              scope="request"
+              validate="false" input="/Admin.do">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+      
+      <action parameter="_action" path="/AdminType" type="com.itth.ttraq.actions.AdminTypeAction" name="adminTypeForm"
+              scope="request"
+              validate="false">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+      
+
+      <action parameter="_action" path="/AdminStatus" type="com.itth.ttraq.actions.AdminStatusAction"
+              name="adminStatusForm" scope="request"
+              validate="false">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+
+      <!--<action parameter="_action" path="/DeleteUser" type="com.itth.ttraq.actions.DeleteUserAction" name="deleteForm" scope="request" validate="false" input="/Admin.do">-->
+      <!--<forward name="success" path="/Admin.do"/>-->
+      <!--</action>-->
+
+      <action parameter="_action" path="/AdminProjects" type="com.itth.ttraq.actions.AdminProjectsAction"
+              name="adminProjectsForm"
+              scope="request" validate="false">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+
+      <action parameter="_action" path="/DeleteAssignment" type="com.itth.ttraq.actions.DeleteAssignmentAction"
+              name="deleteForm"
+              scope="request" validate="false" input="/Admin.do">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+
+      <action parameter="_action" path="/AddAssignment" type="com.itth.ttraq.actions.AddAssignmentAction"
+              name="addAssignmentForm"
+              scope="request" validate="false" input="/Admin.do">
+         <forward name="success" path="/Admin.do"/>
+      </action>
+
+      <action parameter="_action" path="/DeleteTimestamp" type="com.itth.ttraq.actions.DeleteTimeStampAction"
+              name="deleteForm"
+              scope="request" validate="false" input="/Main.do">
+         <forward name="success" path="/Main.do"/>
+      </action>
+
+      <action parameter="_action" path="/EditTimestamp" type="com.itth.ttraq.actions.EditTimeStampAction"
+              name="editTimeStampForm"
+              scope="request" validate="true" input="/jsp/editTimestamp.jsp">
+         <forward name="Alterar" path="/Main.do" redirect="true"/>
+         <forward name=" Salvar " path="/Main.do" redirect="true"/>
+         <forward name=" Salvar e Novo... " path="/CreateTimestamp.do"/>
+         <forward name=" Cancelar " path="/Main.do" redirect="true"/>
+        
+      </action>
+      
+      <action parameter="_action" path="/EditTimestamps" type="com.itth.ttraq.actions.EditTimeStampsAction"
+              name="editTimeStampsForm"
+              scope="session" validate="false">
+         <forward name="success" path="/Main.do"/>
+      </action>
+
+      <action parameter="_action" path="/SelectTimestamp" type="com.itth.ttraq.actions.SelectTimeStampAction"
+              name="selectTimestampForm"
+              scope="request" validate="false" input="/Main.do">
+         <forward name="success" path="/jsp/editTimestamp.jsp"/>
+      </action>
+
+      <action parameter="_action" path="/CreateTimestamp" type="com.itth.ttraq.actions.CreateTimeStampAction"
+              name="editTimeStampForm"
+              scope="request" validate="false" input="/Main.do">
+         <forward name="success" path="/jsp/editTimestamp.jsp"/>
+      </action>
+
+      <action parameter="_action" path="/SelectProject" type="com.itth.ttraq.actions.SelectProjectAction"
+              name="selectProjectForm"
+              scope="request" validate="false" input="/Main.do">
+      </action>
+
+      <action parameter="_action" path="/NoProjects" type="com.itth.ttraq.actions.NoProjectsAction" unknown="true">
+         <forward name="success" path="/jsp/noprojects.jsp"/>
+      </action>
+
+      <action parameter="_action" path="/Main" type="com.itth.ttraq.actions.MainAction" unknown="true">
+         <forward name="success" path="/jsp/main.jsp"/>
+      </action>
+
+      <!-- Process a user logoff -->
+      <action parameter="_action" path="/Logout" type="com.itth.ttraq.actions.LogoutAction">
+         <forward name="success" path="/jsp/logon.jsp"/>
+      </action>
+
+      <!-- Process a user logon -->
+      <action parameter="_action" path="/Logon" type="com.itth.ttraq.actions.LogonAction" name="logonForm"
+              scope="request" validate="false"
+              input="/Logon.do">
+         <forward name="error" path="/jsp/logon.jsp"/>
+         <forward name="success" path="/Main.do" redirect="true"/>
+      </action>
+
+      <!-- Export -->
+      <action parameter="_action" path="/Export" type="com.itth.ttraq.actions.ExportAction" name="exportForm"
+              scope="request"
+              validate="false" input="/Main.do">
+         <forward name="exportCSV" path="/jsp/exportCSV.jsp"/>
+         <forward name="exportXML" path="/jsp/exportXML.jsp"/>
+         <forward name="exportHTML" path="/jsp/exportHTML.jsp"/>
+         <forward name="exportEXCEL" path="/jsp/exportEXCEL.jsp"/>
+         <forward name="success" path="/jsp/export.jsp"/>
+      </action>
+      
+      <!-- Export All -->
+      <action parameter="_action" path="/ExportAll" type="com.itth.ttraq.actions.ExportAllAction" name="exportForm"
+              scope="request"
+              validate="false" input="/Main.do">
+         <forward name="exportAllCSV" path="/jsp/exportAllCSV.jsp"/>
+         <forward name="exportAllXML" path="/jsp/exportAllXML.jsp"/>
+         <forward name="exportAllHTML" path="/jsp/exportAllHTML.jsp"/>
+         <forward name="exportAllEXCEL" path="/jsp/exportAllEXCEL.jsp"/>
+         <forward name="success" path="/jsp/exportAll.jsp"/>
+      </action>
+
+      <action parameter="_action" path="/Setup" type="com.itth.ttraq.actions.SetupAction" name="setupForm"
+              scope="request">
+         <forward name="setup" path="/jsp/setup.jsp"/>
+         <forward name="success" path="/Main.do" redirect="true"/>
+      </action>
+
+      <action parameter="_action" path="/EditUserSettings" type="com.itth.ttraq.actions.EditUserSettingsAction"
+              name="editUserSettingsForm"
+              scope="request" input="/jsp/editUserSettings.jsp">
+         <forward name="success" path="/Main.do"/>
+      </action>
+
+      <action parameter="_action" path="/ViewUserSettings" type="com.itth.ttraq.actions.ViewUserSettingsAction"
+              name="editUserSettingsForm"
+              scope="request">
+         <forward name="edit" path="/jsp/editUserSettings.jsp"/>
+      </action>
+
+   </action-mappings>
+
+
+   <!-- ========== Controller Configuration ================================ -->
+   <controller>   	  
+   </controller>
+
+
+   <!-- ========== Message Resources Definitions =========================== -->
+
+   <message-resources parameter="com.itth.ttraq.Messages_br" null="false"/>
+
+   <!-- ========== Plug Ins Configuration ================================== -->
+
+   <plug-in className="org.apache.struts.plugins.ModuleConfigVerifier"/>
+   <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+      <set-property property="pathnames" value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
+   </plug-in>
+
+
+</struts-config>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" "/org/apache/commons/validator/resources/validator_1_1_3.dtd">
+
+<!--
+Validation Rules for the TTraq Web Application
+$Id: validation.xml,v 1.4 2006/08/27 21:33:04 thhart Exp $
+-->
+
+<form-validation>
+   <!-- ========== Default Language Form Definitions ===================== -->
+   <formset>
+      <form name="logonForm">
+         <field property="username" depends="required">
+            <arg key="prompt.loginname"/>
+         </field>
+
+         <field property="password" depends="required">
+            <arg key="prompt.password"/>
+         </field>
+      </form>
+      
+      <form name="editTimeStampForm">
+      	 <field property="age" depends="required,integer,intRange">
+	        <arg position="0" key="projectId"/>
+	        <arg position="1" name="intRange" key="${var:min}" resource="false"/>
+	        <arg position="2" name="intRange" key="${var:max}" resource="false"/>
+	        <var><var-name>min</var-name><var-value>1</var-value></var>
+	        <var><var-name>max</var-name><var-value>9999999</var-value></var>
+    	</field>
+      </form>
+      
+   </formset>
+</form-validation>
